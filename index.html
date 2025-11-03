@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshCart - Grocery Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🛒 FreshCart</h1>
+            <button class="cart-button" onclick="openCart()">
+                Cart <span class="cart-count" id="cartCount">0</span>
+            </button>
+        </header>
+
+        <div class="products" id="productsGrid"></div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="modal" id="cartModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2 style="color: #ff6b6b; margin-bottom: 30px;">Your Shopping Cart</h2>
+            <div id="cartItems"></div>
+            <div id="categorySummary"></div>
+            <div class="total-section">
+                <span>Total Amount:</span>
+                <span id="totalAmount">₹0</span>
+            </div>
+            <button class="generate-bill-btn" onclick="generateBill()">Generate Bill</button>
+        </div>
+    </div>
+
+    <!-- Bill Modal -->
+    <div class="modal" id="billModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeBill()">&times;</span>
+            <div class="bill" id="billContent"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
